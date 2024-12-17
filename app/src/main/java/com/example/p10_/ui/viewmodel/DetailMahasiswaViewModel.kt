@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
 class DetailMhsViewModel (
     savedStateHandle: SavedStateHandle,
@@ -48,3 +49,11 @@ class DetailMhsViewModel (
             initialValue =
             DetailUiState(isLoading = true)
         )
+    fun deleteMhs(){
+        detailUiState.value.detailUiEvent.toMahasiswaEntity().let {
+            viewModelScope.launch {
+                repositoryMhs.deleteMhs(it)
+            }
+        }
+    }
+}
