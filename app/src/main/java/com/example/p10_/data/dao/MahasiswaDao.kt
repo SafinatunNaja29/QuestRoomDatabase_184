@@ -23,7 +23,9 @@ interface MahasiswaDao {
     @Delete
     suspend fun deleteMahasiswa(mahasiswa: Mahasiswa)  //menghapus data mahasiswa tertentu dari database
 
-
+    //Update Mahasiswa
+    @Update
+    suspend fun updateMahasiswa(mahasiswa: Mahasiswa) //memperbarui informasi mahasiswa yang sudah ada di database
 
     @Insert
     suspend fun insertMahasiswa(mahasiswa: Mahasiswa) //mahasiswa diambil dari dataclass Mahasiswa
