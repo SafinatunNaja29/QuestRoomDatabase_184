@@ -33,3 +33,6 @@ home setelah delete data mahasiswa
 
 pesan kolom tidak boleh kosong
 ![IMG-20241217-WA0023](https://github.com/user-attachments/assets/133e4eb1-c419-4d32-a723-e2c64be738d0)
+
+Database
+<img width="904" alt="Screenshot 2024-12-17 120448" src="https://github.com/user-attachments/assets/bc1233d6-a0a9-4fbe-ba9c-f88ce522ed9a" />
