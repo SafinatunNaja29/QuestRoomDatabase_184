@@ -1,7 +1,7 @@
 package com.example.p10_.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
-
+import com.example.p10_.data.entity.Mahasiswa
 import com.example.p10_.repository.RepositoryMhs
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.StateFlow
@@ -11,6 +11,7 @@ import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.SharingStarted
 
 
 class HomeMhsViewModel (
@@ -45,3 +46,9 @@ class HomeMhsViewModel (
         )
 }
 
+data class HomeUiState(
+    val listMhs: List<Mahasiswa> = listOf(),
+    val isLoading: Boolean = false,
+    val isError: Boolean = false,
+    val errorMessage: String = ""
+)
