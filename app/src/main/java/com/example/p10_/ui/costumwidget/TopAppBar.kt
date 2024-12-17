@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun CustomTopAppBar(
+fun TopAppBar(
     onBack: () -> Unit,
     showBackButton: Boolean = true,
     judul: String,
@@ -23,7 +23,7 @@ fun CustomTopAppBar(
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(horizontal = 16.dp),
         contentAlignment = Alignment.Center // Pastikan konten di tengah
     ) {
         if (showBackButton) {
@@ -35,9 +35,9 @@ fun CustomTopAppBar(
                     onClick = onBack,
                     modifier = Modifier.align(Alignment.CenterVertically)
                 ) {
-                    Text("Kembali")
+                    Text("Kembali", modifier = Modifier.padding(top = 27.dp))
                 }
-                Spacer(modifier = Modifier.weight(2f))
+                Spacer(modifier = Modifier.weight(3f))
             }
         }
 
@@ -46,7 +46,7 @@ fun CustomTopAppBar(
             text = judul,
             fontSize = 25.sp,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.align(Alignment.Center)
+            modifier = Modifier.align(Alignment.Center).padding(top = 30.dp)
         )
     }
 }

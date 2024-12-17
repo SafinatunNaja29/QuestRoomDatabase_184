@@ -26,7 +26,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.p10_.ui.costumwidget.CustomTopAppBar
+import com.example.p10_.ui.costumwidget.TopAppBar
 import com.example.p10_.ui.navigation.AlamatNavigasi
 import com.example.p10_.ui.viewmodel.FormErrorState
 import com.example.p10_.ui.viewmodel.MahasiswaEvent
@@ -71,7 +71,7 @@ fun InsertMhsView(
                 .padding(16.dp)
         ) {
 
-            CustomTopAppBar(
+            TopAppBar(
                 onBack = onBack,
                 showBackButton = true,
                 judul = "Tambah Mahasiswa"
